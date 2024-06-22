@@ -9,7 +9,7 @@ import React from '@/assets/React.png';
 import Postgres from '@/assets/postgres.png';
 import Me from '@/assets/Me.png';
 
-import { skillProps } from '@/Sections/SkillList';
+import { skillProps } from '@/Sections/Skills';
 
 export const Images = {
   Html,
@@ -28,37 +28,46 @@ export const skillData: skillProps[] = [
   {
     imgPath: Images.Net,
     skillName: ".Net",
+    percentage: 60,
   },
   {
     imgPath: Images.Js,
     skillName: "JavaScript",
+    percentage: 80,
   },
   {
     imgPath: Images.Html,
     skillName: "Html",
+    percentage: 90,
   },
   {
     imgPath: Images.Css2,
     skillName: "Css",
+    percentage: 80,
   },  
   {
     imgPath: Images.Git,
     skillName: "Git",
+    percentage: 80,
   },  
   {
     imgPath: Images.TS,
     skillName: "TypeScript",
+    percentage: 80,
   },  
   {
     imgPath: Images.Devops,
     skillName: "Devops",
+    percentage: 60,
   },
   {
     imgPath: Images.React,
     skillName: "React",
+    percentage: 80,
   },
   {
     imgPath: Images.Postgres,
     skillName: "Postgres",
+    percentage: 30,
   },
 ];

@@ -1,5 +1,5 @@
 import { About } from "@/Sections/About";
-import SkillList from "@/Sections/SkillList";
+import SkillList from "@/Sections/Skills";
 import { Header } from "./Sections/Header";
 function App() {
   return (

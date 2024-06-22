@@ -9,7 +9,7 @@ export const About = () => {
             <span className="text-2xl text-action">
               Hello, I am <br />
             </span>
-            Fullstack developer, I am passionate about developing systems and
+            A Fullstack developer, I am passionate about developing systems and
             creating web interfaces. With years of experience in web design and
             development. When I’m not working, I tend to spend my time going to
             the gym but not in a competitive way. I also enjoy playing disc-golf
