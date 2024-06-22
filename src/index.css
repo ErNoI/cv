@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-    @apply text-white;
-    @apply bg-primary;
-    @apply font-sans;
+    @apply text-zinc-100;
+    @apply bg-zinc-800;
+    @apply font-cabin;
+    @apply tracking-wider;
   }

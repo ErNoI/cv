@@ -1,4 +1,3 @@
-import { skillProps } from '@/components/Skill';
 import Html from '@assets/HTML.png';
 import Js from '@/assets/JSlogo.png';
 import Css2 from '@/assets/CSS.png';
@@ -7,7 +6,10 @@ import Git from '@/assets/Git.png';
 import TS from '@/assets/TS.png';
 import Devops from '@/assets/Devops.png';
 import React from '@/assets/React.png';
-import Postgres from '@/assets/Postgres.png';
+import Postgres from '@/assets/postgres.png';
+import Me from '@/assets/Me.png';
+
+import { skillProps } from '@/components/SkillList';
 
 export const Images = {
   Html,
@@ -18,7 +20,8 @@ export const Images = {
   TS,
   Devops,
   React,
-  Postgres
+  Postgres,
+  Me
 }
 
 export const skillData: skillProps[] = [

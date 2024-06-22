@@ -7,6 +7,10 @@ export default {
         primary: "#34353a",
         secondary: "#3d3e42",
         action: "#ffd06e",
+        accent: "#62533c",
+      },
+      fontFamily: {
+        cabin: ["Cabin", "sans-serif"],
       },
     },
   },
