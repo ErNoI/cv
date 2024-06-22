@@ -7,15 +7,16 @@ export const About = () => {
         <div className="flex flex-col gap-4 justify-center items-center">
           <p className="justify-centert">
             <span className="text-2xl text-action">
-              Hello, I am <br />
+              Hello! <br />
             </span>
-            A Fullstack developer, I am passionate about developing systems and
-            creating web interfaces. With years of experience in web design and
-            development. When I’m not working, I tend to spend my time going to
-            the gym but not in a competitive way. I also enjoy playing disc-golf
-            so you might find me around the courses in Gothenburg. The weather
-            as all swedes knows is unreliable and when it forces you to be at
-            home I usually game with my friends or code my personal projects.
+            A Fullstack developer, that is passionate about developing systems
+            and creating web interfaces. With years of experience in web design
+            and development. When I'm not working, I tend to spend my time going
+            to the gym but not in a competitive way. I also enjoy playing
+            disc-golf so you might find me around the courses in Gothenburg. The
+            weather as all swedes knows is unreliable and when it forces you to
+            be at home I usually game with my friends or code my personal
+            projects.
           </p>
 
           <div className="flex flex-col items-center gap-2">

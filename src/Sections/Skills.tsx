@@ -18,7 +18,10 @@ export const Skill: FC<skillProps> = ({ imgPath, skillName }) => {
   );
 };
 
-export const SkillProcentage: FC<skillProps> = ({ skillName, percentage }) => {
+export const SkillPercentageBar: FC<skillProps> = ({
+  skillName,
+  percentage,
+}) => {
   return (
     <div className="my-4 flex items-center justify-between">
       <span className="">{skillName}</span>
@@ -60,11 +63,11 @@ const SkillList = () => {
           {skillData
             .sort((a, b) => (b.percentage || 0) - (a.percentage || 0))
             .map((skill, index) => (
-              <SkillProcentage
+              <SkillPercentageBar
                 key={index}
                 percentage={skill.percentage}
                 skillName={skill.skillName}
-              ></SkillProcentage>
+              ></SkillPercentageBar>
             ))}
         </div>
       )}

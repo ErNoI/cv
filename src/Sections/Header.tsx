@@ -1,4 +1,3 @@
-import { Images } from "@/data/StaticData";
 import { Button } from "../components/Button";
 
 export const Menu = () => {
@@ -17,7 +16,7 @@ export const Thumbnail = () => {
     <div className="flex gap-10 justify-center pb-20">
       <div className="text-stone-200 text-2xl flex flex-col gap-8 justify-center items-center">
         <div className="text-4xl">
-          I'M{" "}
+          I AM{" "}
           <span className="text-action text-6xl font-extrabold">
             Ernes Filipovic
           </span>
@@ -25,9 +24,6 @@ export const Thumbnail = () => {
         <div className="font-extrabold">Fullstack Developer</div>
         <Button buttonText="Contact Me" />
       </div>
-      {/* <div>
-        <img src={Images.Me} className="h-96" alt="Profile" />
-      </div> */}
     </div>
   );
 };
