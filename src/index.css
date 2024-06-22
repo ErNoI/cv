@@ -6,6 +6,6 @@
 body {
     @apply text-zinc-100;
     @apply bg-zinc-800;
-    @apply font-cabin;
+    @apply font-poppins;
     @apply tracking-wider;
   }

@@ -8,7 +8,7 @@ export type buttonProps = {
 
 export const Button: FC<buttonProps> = ({ buttonText }) => {
   return (
-    <button className="min-h-14 min-w-44 max-h-14 max-w-44 rounded-md text-xl border-4 border-action text-action p-2 font-bold">
+    <button className="min-h-14 min-w-44 max-h-14 max-w-44 rounded-md text-xl border-4 border-action text-action p-2 font-bold hover:bg-action hover:text-secondary duration-300">
       {buttonText}
     </button>
   );

@@ -9,7 +9,7 @@ import React from '@/assets/React.png';
 import Postgres from '@/assets/postgres.png';
 import Me from '@/assets/Me.png';
 
-import { skillProps } from '@/components/SkillList';
+import { skillProps } from '@/Sections/SkillList';
 
 export const Images = {
   Html,
