@@ -39,7 +39,7 @@ const SkillList = () => {
   const [checked, setChecked] = useState(false);
   skillData.sort((a, b) => (b.percentage || 0) - (a.percentage || 0));
   return (
-    <section id="skills" className="about section bd-container pb-16">
+    <section id="skills" className="about section bd-container pb-16 ">
       <div className="flex flex-col items-center">
         <div className="flex justify-center">
           <h1 className="text-5xl text-center font-bold m-6">Skills</h1>

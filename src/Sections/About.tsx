@@ -34,12 +34,6 @@ export const About = () => {
             <span>Projects</span>
           </div>
         </div>
-
-        {/* <img
-          src="https://images.unsplash.com/photo-1579591919791-0e3737ae3808?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTMwMzY1NzZ8&ixlib=rb-4.0.3&q=85"
-          alt="selfimage"
-          className="w-64 rounded-md"
-        /> */}
       </div>
     </section>
   );

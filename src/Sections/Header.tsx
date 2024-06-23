@@ -4,8 +4,10 @@ export const Menu = () => {
   const MenuOptions = ["About", "Portfolio", "Contact"];
   return (
     <div className="flex justify-center mb-14 text-zinc-400 font-extrabold">
-      {MenuOptions.map((option) => (
-        <button className="m-2 hover:text-white">{option}</button>
+      {MenuOptions.map((option, index) => (
+        <button key={index} className="m-2 hover:text-white">
+          {option}
+        </button>
       ))}
     </div>
   );
@@ -21,8 +23,16 @@ export const Thumbnail = () => {
           </span>
         </div>
         <div className="font-extrabold">Fullstack Developer</div>
-        <Button buttonText="Contact Me" />
+        <Button
+          onClick={(e) => {
+            console.log(e.target);
+          }}
+          buttonText="Contact Me"
+        />
       </div>
+      {/* <div>
+        <img src={Images.Me} className="h-96" alt="Profile" />
+      </div> */}
     </div>
   );
 };

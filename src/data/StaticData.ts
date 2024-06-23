@@ -11,6 +11,7 @@ import Me from '@/assets/Me.png';
 import Mongo from '@/assets/Mongo.png';
 
 import { skillProps } from '@/sections/Skills';
+import { AssignmentProps } from '@/components/Assignment';
 
 export const Images = {
   Html,
@@ -76,5 +77,50 @@ export const skillData: skillProps[] = [
     imgPath: Images.Mongo,
     skillName: "Mongodb",
     percentage: 30,
+  },
+];
+
+export const assignmentData: AssignmentProps[] = [
+  {
+    company: "Tromb",
+    role: "Fullstack Developer",
+    description:
+      "Lorem Ipsum is simply dummy text of the ping industryke a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    year: "2024",
+  },
+  {
+    company: "Friday",
+    role: "Fullstack Developer",
+    description:
+      "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    year: "2021",
+  },
+  {
+    company: "Toyota Material Handling",
+    role: "Backend Developer",
+    description:
+      "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    year: "2019",
+  },
+  {
+    company: "Visit-group",
+    role: "Internship",
+    description:
+      "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    year: "2018",
+  },
+  {
+    company: ".Net",
+    role: "student / Lexicon Gothenburg",
+    description:
+      "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    year: "2016",
+  },
+  {
+    company: "Game-development",
+    role: "student / Örebros University",
+    description:
+      "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    year: "2013",
   },
 ];
