@@ -11,7 +11,7 @@ const ToggleSwitch: FC<ToggleSwitchProps> = ({ checked, setChecked }) => {
   };
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex">
       <label htmlFor="toggle" className="flex items-center cursor-pointer">
         <div className="relative">
           <input
@@ -27,7 +27,7 @@ const ToggleSwitch: FC<ToggleSwitchProps> = ({ checked, setChecked }) => {
             }`}
           ></div>
           <div
-            className={`dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition ${
+            className={`absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition ${
               checked
                 ? "transform translate-x-full bg-secondary"
                 : "bg-secondary"

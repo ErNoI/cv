@@ -23,11 +23,11 @@ export const SkillPercentageBar: FC<skillProps> = ({
   percentage,
 }) => {
   return (
-    <div className="my-4 flex items-center justify-between">
+    <div className="my-4 flex items-center justify-between font-bold">
       <span className="">{skillName}</span>
-      <div className="w-10/12 h-2.5 bg-accent">
+      <div className="w-10/12 h-5 bg-accent">
         <div
-          className="bg-action h-2.5"
+          className="bg-action h-5"
           style={{ width: `${percentage}%` }}
         ></div>
       </div>
@@ -59,7 +59,7 @@ const SkillList = () => {
       )}
 
       {checked && (
-        <div className="w-3/4">
+        <div className="w-3/4 flex flex-col gap-4">
           {skillData
             .sort((a, b) => (b.percentage || 0) - (a.percentage || 0))
             .map((skill, index) => (
