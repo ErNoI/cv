@@ -16,7 +16,6 @@ export const Thumbnail = () => {
     <div className="flex gap-10 justify-center pb-20">
       <div className="text-stone-200 text-2xl flex flex-col gap-8 justify-center items-center">
         <div className="text-4xl">
-          I AM{" "}
           <span className="text-action text-6xl font-extrabold">
             Ernes Filipovic
           </span>

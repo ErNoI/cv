@@ -8,8 +8,9 @@ import Devops from '@/assets/Devops.png';
 import React from '@/assets/React.png';
 import Postgres from '@/assets/postgres.png';
 import Me from '@/assets/Me.png';
+import Mongo from '@/assets/Mongo.png';
 
-import { skillProps } from '@/Sections/Skills';
+import { skillProps } from '@/sections/Skills';
 
 export const Images = {
   Html,
@@ -21,7 +22,8 @@ export const Images = {
   Devops,
   React,
   Postgres,
-  Me
+  Me,
+  Mongo
 }
 
 export const skillData: skillProps[] = [
@@ -42,7 +44,7 @@ export const skillData: skillProps[] = [
   },
   {
     imgPath: Images.Css2,
-    skillName: "Css",
+    skillName: "CSS",
     percentage: 80,
   },  
   {
@@ -58,7 +60,7 @@ export const skillData: skillProps[] = [
   {
     imgPath: Images.Devops,
     skillName: "Devops",
-    percentage: 60,
+    percentage: 70,
   },
   {
     imgPath: Images.React,
@@ -68,6 +70,11 @@ export const skillData: skillProps[] = [
   {
     imgPath: Images.Postgres,
     skillName: "Postgres",
+    percentage: 40,
+  },  
+  {
+    imgPath: Images.Mongo,
+    skillName: "Mongodb",
     percentage: 30,
   },
 ];

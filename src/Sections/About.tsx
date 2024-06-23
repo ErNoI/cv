@@ -1,13 +1,13 @@
 export const About = () => {
   return (
-    <section className="about section bd-container py-16">
+    <section id="about" className="about section bd-container py-16">
       <h1 className="text-5xl text-center font-bold mb-11">About</h1>
 
       <div className="flex md:flex-row items-center justify-between max-w-screen-md mx-auto">
         <div className="flex flex-col gap-4 justify-center items-center">
           <p className="justify-centert">
             <span className="text-2xl text-action">
-              Hello! <br />
+              Hello I am <br />
             </span>
             A Fullstack developer, that is passionate about developing systems
             and creating web interfaces. With years of experience in web design
@@ -26,12 +26,12 @@ export const About = () => {
 
           <div className="flex flex-col items-center gap-2">
             <span className="text-2xl">3+</span>
-            <span>Projects</span>
+            <span>Assignments</span>
           </div>
 
           <div className="flex flex-col items-center gap-2">
             <span className="text-2xl">10</span>
-            <span>Skills</span>
+            <span>Projects</span>
           </div>
         </div>
 

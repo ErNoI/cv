@@ -23,11 +23,11 @@ export const SkillPercentageBar: FC<skillProps> = ({
   percentage,
 }) => {
   return (
-    <div className="my-4 flex items-center justify-between font-bold">
+    <div className="my-4 flex items-center justify-between font-bold   ">
       <span className="">{skillName}</span>
-      <div className="w-10/12 h-5 bg-accent">
+      <div className="w-10/12 h-2.5 bg-accent">
         <div
-          className="bg-action h-5"
+          className="bg-action h-2.5"
           style={{ width: `${percentage}%` }}
         ></div>
       </div>
@@ -37,41 +37,42 @@ export const SkillPercentageBar: FC<skillProps> = ({
 
 const SkillList = () => {
   const [checked, setChecked] = useState(false);
+  skillData.sort((a, b) => (b.percentage || 0) - (a.percentage || 0));
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex justify-center">
-        <h1 className="text-5xl text-center font-bold m-6">Skills</h1>
-        <ToggleSwitch
-          checked={checked}
-          setChecked={(e) => setChecked(e)}
-        ></ToggleSwitch>
-      </div>
-      {!checked && (
-        <div className="flex justify-center flex-wrap">
-          {skillData.map((skill, index) => (
-            <Skill
-              key={index}
-              imgPath={skill.imgPath}
-              skillName={skill.skillName}
-            ></Skill>
-          ))}
+    <section id="skills" className="about section bd-container pb-16">
+      <div className="flex flex-col items-center">
+        <div className="flex justify-center">
+          <h1 className="text-5xl text-center font-bold m-6">Skills</h1>
+          <ToggleSwitch
+            checked={checked}
+            setChecked={(checked) => setChecked(checked)}
+          />
         </div>
-      )}
+        {!checked && (
+          <div className="flex justify-center flex-wrap">
+            {skillData.map((skill, index) => (
+              <Skill
+                key={index}
+                imgPath={skill.imgPath}
+                skillName={skill.skillName}
+              ></Skill>
+            ))}
+          </div>
+        )}
 
-      {checked && (
-        <div className="w-3/4 flex flex-col gap-4">
-          {skillData
-            .sort((a, b) => (b.percentage || 0) - (a.percentage || 0))
-            .map((skill, index) => (
+        {checked && (
+          <div className="w-3/4 flex flex-col gap-3">
+            {skillData.map((skill, index) => (
               <SkillPercentageBar
                 key={index}
                 percentage={skill.percentage}
                 skillName={skill.skillName}
               ></SkillPercentageBar>
             ))}
-        </div>
-      )}
-    </div>
+          </div>
+        )}
+      </div>
+    </section>
   );
 };
 
