@@ -10,7 +10,7 @@ function App() {
   const experienceRef = useRef<HTMLDivElement | null>();
 
   return (
-    <div className="bg-primary max-w-6xl mx-auto border-l border-r border-action ">
+    <div className="bg-primary max-w-6xl mx-auto border-l border-r border-action">
       <Header />
       <About />
       <Experience />

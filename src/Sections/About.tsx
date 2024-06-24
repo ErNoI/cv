@@ -26,7 +26,7 @@ const About = () => {
             projects.
           </p>
 
-          <div className="flex flex-row gap-3 mt-16">
+          <div className="flex flex-row gap-3 mt-16 max-md:flex-col">
             <InfoBox Text="5" subText="Years of Experience"></InfoBox>
             <InfoBox Text="10" subText="Projects"></InfoBox>
             <InfoBox Text="3+" subText="Assignments"></InfoBox>

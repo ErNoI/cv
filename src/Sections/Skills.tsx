@@ -23,7 +23,7 @@ export const SkillPercentageBar: FC<skillProps> = ({
   percentage,
 }) => {
   return (
-    <div className="my-4 flex items-center justify-between font-bold   ">
+    <div className="my-4 flex items-center justify-between font-bold max-lg:flex-col">
       <span className="">{skillName}</span>
       <div className="w-10/12 h-2.5 bg-accent">
         <div
