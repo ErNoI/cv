@@ -79,14 +79,14 @@ export const assignmentData: AssignmentProps[] = [
     role: "Fullstack Developer / Consultant Volvo",
     description:
       "At VGCS I joined a new team that was assigned the development of a new microservice to address material related challenges within a quarry. The core focus of this assignment was to create a microservice that would provide solutions to the material problems faced by the quarry. These material challenges might include optimizing material extraction, tracking material inventory, monitoring material quality, and ensuring efficient logistics within the quarry. Technical keywords: React, Nest.Js, Prisma, GraphQL, PostgresQL, Docker, Devops, Microservice",
-    year: "2024",
+    year: "Now",
   },
   {
     company: "Friday",
     role: "Game Developer",
     description:
       "At Friday I started working with a new multiplayer horror VR game in Unreal engine 4. The team was developing the whole game logic from the ground - up close together with potential users. The work also involved developing AI functionalities and balanced maps to create good user experiences. I focused on developing the UI and world content, inviting users to really feel the game coming to life through the VR glasses.",
-    year: "2021",
+    year: "2022",
   },
   {
     company: "Toyota Material Handling",
