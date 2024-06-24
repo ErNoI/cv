@@ -35,7 +35,10 @@ export const Thumbnail = () => {
         <div className="font-medium">Fullstack Developer</div>
         <Button
           onClick={() => {
-            window.location.href = "mailto:ernes.filipovic@gmail.com";
+            window.open(
+              "https://www.linkedin.com/in/ernes-filipovic-aaa077b5/",
+              "_blank"
+            );
           }}
           buttonText="Contact Me"
         />
