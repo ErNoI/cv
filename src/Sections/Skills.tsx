@@ -1,7 +1,6 @@
-import ToggleSwitch from "@/components/ToggleSwitch";
 import { skillData } from "@/data/StaticData";
 
-import { FC, useState } from "react";
+import { FC } from "react";
 
 export type skillProps = {
   skillName: string;
@@ -36,7 +35,7 @@ export const SkillPercentageBar: FC<skillProps> = ({
 };
 
 const SkillList = () => {
-  const [checked, setChecked] = useState(true);
+  // const [checked, setChecked] = useState(true);
   skillData.sort((a, b) => (b.percentage || 0) - (a.percentage || 0));
   return (
     <div id="skills" className="pt-7 pb-16 shadow-inner">
@@ -48,7 +47,7 @@ const SkillList = () => {
             setChecked={(checked) => setChecked(checked)}
           /> */}
         </div>
-        {!checked && (
+        {/* {!checked && (
           <div className="flex justify-center flex-wrap">
             {skillData.map((skill, index) => (
               <Skill
@@ -58,19 +57,17 @@ const SkillList = () => {
               ></Skill>
             ))}
           </div>
-        )}
+        )} */}
 
-        {checked && (
-          <div className="w-3/4 flex flex-col gap-3">
-            {skillData.map((skill, index) => (
-              <SkillPercentageBar
-                key={index}
-                percentage={skill.percentage}
-                skillName={skill.skillName}
-              ></SkillPercentageBar>
-            ))}
-          </div>
-        )}
+        <div className="w-3/4 flex flex-col gap-3">
+          {skillData.map((skill, index) => (
+            <SkillPercentageBar
+              key={index}
+              percentage={skill.percentage}
+              skillName={skill.skillName}
+            ></SkillPercentageBar>
+          ))}
+        </div>
       </div>
     </div>
   );
