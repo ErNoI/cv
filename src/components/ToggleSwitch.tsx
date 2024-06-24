@@ -23,13 +23,13 @@ const ToggleSwitch: FC<ToggleSwitchProps> = ({ checked, setChecked }) => {
           />
           <div
             className={`block w-14 h-8 rounded-full ${
-              checked ? "bg-action" : "bg-secondary"
+              checked ? "bg-action" : "bg-zinc-500"
             }`}
           ></div>
           <div
             className={`absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition ${
               checked
-                ? "transform translate-x-full bg-secondary"
+                ? "transform translate-x-full bg-zinc-500"
                 : "bg-secondary"
             }`}
           ></div>

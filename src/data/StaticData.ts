@@ -78,6 +78,27 @@ export const skillData: skillProps[] = [
     skillName: "Mongodb",
     percentage: 30,
   },
+  {
+    imgPath: "",
+    skillName: "NodeJS",
+    percentage: 60,
+  },
+  {
+    imgPath: "",
+    skillName: "TailwindCSS",
+    percentage: 70,
+  },
+  {
+    imgPath: "",
+    skillName: "RestAPI",
+    percentage: 60,
+  },
+  {
+    imgPath: "",
+    skillName: "Microservices",
+    percentage: 70,
+  },
+  
 ];
 
 export const assignmentData: AssignmentProps[] = [
@@ -123,4 +144,5 @@ export const assignmentData: AssignmentProps[] = [
       "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     year: "2013",
   },
+  
 ];

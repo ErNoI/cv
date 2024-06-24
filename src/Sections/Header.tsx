@@ -1,7 +1,7 @@
 import { Button } from "../components/Button";
 
 export const Menu = () => {
-  const MenuOptions = ["About", "Portfolio", "Contact"];
+  const MenuOptions = ["About", "Experience", "Contact"];
   return (
     <div className="flex justify-center mb-14 text-zinc-400 font-extrabold">
       {MenuOptions.map((option, index) => (
@@ -15,17 +15,17 @@ export const Menu = () => {
 
 export const Thumbnail = () => {
   return (
-    <div className="flex gap-10 justify-center pb-20">
+    <div className="flex gap-10 justify-center">
       <div className="text-stone-200 text-2xl flex flex-col gap-8 justify-center items-center">
         <div className="text-4xl">
-          <span className="text-action text-6xl font-extrabold">
+          <span className="text-action text-6xl font-medium">
             Ernes Filipovic
           </span>
         </div>
-        <div className="font-extrabold">Fullstack Developer</div>
+        <div className="font-medium">Fullstack Developer</div>
         <Button
-          onClick={(e) => {
-            console.log(e.target);
+          onClick={() => {
+            window.location.href = "mailto:ernes.filipovic@gmail.com";
           }}
           buttonText="Contact Me"
         />
@@ -39,7 +39,7 @@ export const Thumbnail = () => {
 
 export const Header = () => {
   return (
-    <div className="bg-secondary shadow-lg pt-10">
+    <div className="bg-secondary shadow-lg py-10">
       <Menu />
       <Thumbnail />
     </div>

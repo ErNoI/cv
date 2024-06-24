@@ -1,14 +1,21 @@
-export const About = () => {
-  return (
-    <section id="about" className="about section bd-container py-16">
-      <h1 className="text-5xl text-center font-bold mb-11">About</h1>
+import { InfoBox } from "@/components/InfoBox";
 
-      <div className="flex md:flex-row items-center justify-between max-w-screen-md mx-auto">
+const About = () => {
+  return (
+    <div className="bd-container py-16 ">
+      <h1 className="text-5xl text-center font-medium mb-11 ">
+        {" "}
+        <span className="text-4xl text-action">
+          Hello I am <br />
+        </span>
+      </h1>
+
+      <div className="flex md:flex-row items-center justify-between max-w-screen-md mx-auto ">
         <div className="flex flex-col gap-4 justify-center items-center">
-          <p className="justify-centert">
-            <span className="text-2xl text-action">
+          <p className="justify-center text-center">
+            {/* <span className="text-2xl text-action">
               Hello I am <br />
-            </span>
+            </span> */}
             A Fullstack developer, that is passionate about developing systems
             and creating web interfaces. With years of experience in web design
             and development. When I'm not working, I tend to spend my time going
@@ -19,22 +26,15 @@ export const About = () => {
             projects.
           </p>
 
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-2xl">05</span>
-            <span>Years off Experience</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-2xl">3+</span>
-            <span>Assignments</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-2xl">10</span>
-            <span>Projects</span>
+          <div className="flex flex-row gap-3 mt-16">
+            <InfoBox Text="5" subText="Years of Experience"></InfoBox>
+            <InfoBox Text="10" subText="Projects"></InfoBox>
+            <InfoBox Text="3+" subText="Assignments"></InfoBox>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
+
+export default About;

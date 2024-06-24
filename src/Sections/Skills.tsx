@@ -36,17 +36,17 @@ export const SkillPercentageBar: FC<skillProps> = ({
 };
 
 const SkillList = () => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
   skillData.sort((a, b) => (b.percentage || 0) - (a.percentage || 0));
   return (
-    <section id="skills" className="about section bd-container pb-16 ">
+    <div id="skills" className="pt-7 pb-16 shadow-inner">
       <div className="flex flex-col items-center">
         <div className="flex justify-center">
-          <h1 className="text-5xl text-center font-bold m-6">Skills</h1>
-          <ToggleSwitch
+          <h1 className="text-5xl font-medium m-6">Skills</h1>
+          {/* <ToggleSwitch
             checked={checked}
             setChecked={(checked) => setChecked(checked)}
-          />
+          /> */}
         </div>
         {!checked && (
           <div className="flex justify-center flex-wrap">
@@ -72,7 +72,7 @@ const SkillList = () => {
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 

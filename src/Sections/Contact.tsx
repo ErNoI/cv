@@ -8,7 +8,7 @@ export type contactInfoBoxProps = {
 
 export const ContactInfoBox: FC<contactInfoBoxProps> = ({ Text, Icon }) => {
   return (
-    <div className="bg-secondary p-4 h-16 min-w-82 rounded-md  flex justify-center items-center gap-3">
+    <div className="bg-primary p-4 h-16 min-w-82 rounded-md  flex justify-center items-center gap-3 shadow-lg">
       <Icon size={40}></Icon>
       <div className="text-xl text-action"> {Text}</div>
     </div>
@@ -17,8 +17,8 @@ export const ContactInfoBox: FC<contactInfoBoxProps> = ({ Text, Icon }) => {
 
 export const Contact = () => {
   return (
-    <section className="about section bd-container py-16 bg-primary">
-      <h1 className="text-5xl text-center font-bold mb-16">Contact Me</h1>
+    <div className="about section bd-container py-16 bg-secondary">
+      <h1 className="text-5xl text-center font-medium mb-16">Contact Me</h1>
       <div className="flex gap-3 justify-center">
         <ContactInfoBox
           Text="Ernes.Filipovic@gmail.com"
@@ -29,6 +29,6 @@ export const Contact = () => {
           Icon={IoLocationOutline}
         ></ContactInfoBox>
       </div>
-    </section>
+    </div>
   );
 };
