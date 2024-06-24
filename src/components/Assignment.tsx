@@ -21,10 +21,9 @@ export const Assignment: FC<AssignmentProps> = ({
         </div>
         <div className="w-0 h-0 border-t-[16px] border-t-transparent border-l-[16px] border-b-[16px] border-b-transparent border-l-zinc-500"></div>
       </div>
-      <div className="flex mt-2 flex-col items-center justify-between">
-        {/* <div className="my-3 h-6 w-6 rounded-full ring-4 ring-action "></div> */}
-        <div className=" h-6 w-6 rounded-full bg-action  "></div>
-        <div className="h-5/6 w-0.5 bg-white"></div>
+      <div className="flex mt-2 flex-col items-center ">
+        <div className=" h-6 w-6 mb-6 min-h-6 rounded-full bg-action "></div>
+        <div className="h-full w-0.5 bg-white"></div>
       </div>
       <div>
         <h1 className="text-4xl  font-medium">{company}</h1>

@@ -104,24 +104,22 @@ export const skillData: skillProps[] = [
 export const assignmentData: AssignmentProps[] = [
   {
     company: "Tromb",
-    role: "Fullstack Developer",
+    role: "Fullstack Developer / Consultant Volvo",
     description:
-      "Lorem Ipsum is simply dummy text of the ping industryke a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    year: "2024",
+"At VGCS I joined a new team that was assigned the development of a new microservice to address material related challenges within a quarry. The core focus of this assignment was to create a microservice that would provide solutions to the material problems faced by the quarry. These material challenges might include optimizing material extraction, tracking material inventory, monitoring material quality, and ensuring efficient logistics within the quarry. Technical keywords: React, Nest.Js, Prisma, GraphQL, PostgresQL, Docker, Devops, Microservice",    year: "2024",
   },
   {
     company: "Friday",
-    role: "Fullstack Developer",
+    role: "Game Developer",
     description:
-      "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "At Friday I started working with a new multiplayer horror VR game in Unreal engine 4. The team was developing the whole game logic from the ground - up close together with potential users. The work also involved developing AI functionalities and balanced maps to create good user experiences. I focused on developing the UI and world content, inviting users to really feel the game coming to life through the VR glasses.",
     year: "2021",
   },
   {
     company: "Toyota Material Handling",
     role: "Backend Developer",
-    description:
-      "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    year: "2019",
+    description:"At Toyota I worked in the telematics department to further develop Toyotas existing systems. The system was a way for customers to improve their warehouse in every possible way. Gathered a lot of data from the forklifts to provide the customer with statistics which offered an easy way to find improvements. During the time at Toyota a migration was started, the goal of the migration was to turn the current system into cloud-based microservice architecture. This work also included feature flags so the customers were able to work undisturbed without getting interrupted with the new releases. The teams were involved in the whole flow from building the new system parallel to maintaining the old system with responsibility of tasks working with both new development and testing.",
+        year: "2019",
   },
   {
     company: "Visit-group",
@@ -132,14 +130,14 @@ export const assignmentData: AssignmentProps[] = [
   },
   {
     company: ".Net",
-    role: "student / Lexicon Gothenburg",
+    role: "Student / Lexicon Gothenburg",
     description:
       "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     year: "2016",
   },
   {
     company: "Game-development",
-    role: "student / Örebros University",
+    role: "Student / Örebros University",
     description:
       "Lorem Ipsum is simplhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ed. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     year: "2013",

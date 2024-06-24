@@ -2,13 +2,9 @@ import SkillList from "@/sections/Skills";
 import { Header } from "./sections/Header";
 import { Experience } from "./sections/Experience";
 import { Contact } from "./sections/Contact";
-import { useRef } from "react";
 import About from "./sections/About";
+import { ScrollTopButton } from "./components/ScrollButton";
 function App() {
-  const aboutRef = useRef<HTMLDivElement | null>();
-  const contactRef = useRef<HTMLDivElement | null>();
-  const experienceRef = useRef<HTMLDivElement | null>();
-
   return (
     <div className="bg-primary max-w-6xl mx-auto border-l border-r border-action">
       <Header />
@@ -16,6 +12,7 @@ function App() {
       <Experience />
       <SkillList />
       <Contact />
+      <ScrollTopButton />
     </div>
   );
 }
