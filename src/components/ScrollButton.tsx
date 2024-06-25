@@ -32,7 +32,7 @@ export const ScrollTopButton = () => {
   return (
     <div
       onClick={scrollToTop}
-      className={`bg-secondary w-16 h-16 flex justify-center items-center fixed bottom-6 right-8  cursor-pointer rounded-full shadow-lg transition-all duration-300 max-md:bottom-2 max-md:right-2 max-lg:bg-action ${
+      className={`bg-secondary w-16 h-16 flex justify-center items-center fixed bottom-6 right-8  cursor-pointer rounded-full shadow-lg transition-all duration-300 max-md:bottom-3 max-md:right-3 max-lg:bg-action ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
       }`}
     >

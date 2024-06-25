@@ -10,7 +10,7 @@ export const ContactInfoBox: FC<contactInfoBoxProps> = ({ Text, Icon }) => {
   return (
     <div className=" flex bg-primary items-center p-4 h-16 rounded-md justify-center gap-3 shadow-lg">
       <Icon size={40}></Icon>
-      <div className="text-xl text-action"> {Text}</div>
+      <div className="text-xl max-sm:text-sm text-action"> {Text}</div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const About = () => {
 
       <div className="flex md:flex-row items-center justify-between max-w-screen-md mx-auto ">
         <div className="flex flex-col gap-4 justify-center items-center">
-          <p className="justify-center text-center">
+          <p className="justify-center text-center max-sm:m-2">
             {/* <span className="text-2xl text-action">
               Hello I am <br />
             </span> */}
