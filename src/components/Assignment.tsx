@@ -1,10 +1,12 @@
 import { FC } from "react";
+import { Tag } from "./Tag";
 
 export type AssignmentProps = {
   company: string;
   role: string;
   year: string;
   description: string;
+  tags?: string[];
 };
 
 export const Assignment: FC<AssignmentProps> = ({
@@ -12,6 +14,7 @@ export const Assignment: FC<AssignmentProps> = ({
   role,
   year,
   description,
+  tags,
 }) => {
   return (
     <div className="flex my-4 gap-4">
@@ -30,6 +33,11 @@ export const Assignment: FC<AssignmentProps> = ({
         <div className=" mt-2">
           <h2 className="text-2xl max-sm:text-xl mb-2 ">{role}</h2>
           <div className="max-w-screen-md max-sm:text-sm">{description}</div>
+          <div className="flex flex-wrap gap-1.5 sm:w-5/6 mt-1">
+            {tags?.map((text, index) => (
+              <Tag key={index} text={text} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
