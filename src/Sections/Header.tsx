@@ -9,7 +9,7 @@ export const Menu = () => {
     }
   }
   return (
-    <div className="flex justify-center mb-14 text-zinc-400 font-extrabold">
+    <div className="mb-14 flex justify-center font-extrabold text-zinc-400">
       {MenuOptions.map((option, index) => (
         <button
           onClick={() => handleClick(option.toLowerCase())}
@@ -25,10 +25,10 @@ export const Menu = () => {
 
 export const Thumbnail = () => {
   return (
-    <div className="flex gap-10 justify-center">
-      <div className="text-stone-200 text-2xl flex flex-col gap-8 justify-center items-center">
-        <div className="text-4xl text-center">
-          <span className="text-action text-6xl font-medium">
+    <div className="flex justify-center gap-10">
+      <div className="flex flex-col items-center justify-center gap-8 text-2xl text-stone-200">
+        <div className="text-center text-4xl">
+          <span className="text-6xl font-medium text-action">
             Ernes Filipovic
           </span>
         </div>
@@ -37,7 +37,7 @@ export const Thumbnail = () => {
           onClick={() => {
             window.open(
               "https://www.linkedin.com/in/ernes-filipovic-aaa077b5/",
-              "_blank"
+              "_blank",
             );
           }}
           buttonText="Contact Me"
@@ -49,7 +49,7 @@ export const Thumbnail = () => {
 
 export const Header = () => {
   return (
-    <div className="bg-secondary shadow-lg py-10">
+    <div className="bg-secondary py-10 shadow-lg">
       <Menu />
       <Thumbnail />
     </div>

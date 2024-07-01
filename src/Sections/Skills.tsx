@@ -10,9 +10,9 @@ export type skillProps = {
 
 export const Skill: FC<skillProps> = ({ imgPath, skillName }) => {
   return (
-    <div className="w-52 h-52 bg-secondary rounded-2xl m-4 p-10 flex flex-col justify-between items-center shadow-lg">
+    <div className="m-4 flex h-52 w-52 flex-col items-center justify-between rounded-2xl bg-secondary p-10 shadow-lg">
       <img className="w-16" src={imgPath}></img>
-      <h1 className="font-bold text-lg text-slate-100">{skillName}</h1>
+      <h1 className="text-lg font-bold text-slate-100">{skillName}</h1>
     </div>
   );
 };
@@ -24,9 +24,9 @@ export const SkillPercentageBar: FC<skillProps> = ({
   return (
     <div className="my-4 flex items-center justify-between font-bold max-lg:flex-col">
       <span className="">{skillName}</span>
-      <div className="w-10/12 h-2.5 bg-accent">
+      <div className="h-2.5 w-10/12 bg-accent">
         <div
-          className="bg-action h-2.5"
+          className="h-2.5 bg-action"
           style={{ width: `${percentage}%` }}
         ></div>
       </div>
@@ -38,10 +38,10 @@ const SkillList = () => {
   // const [checked, setChecked] = useState(true);
   skillData.sort((a, b) => (b.percentage || 0) - (a.percentage || 0));
   return (
-    <div id="skills" className="pt-7 pb-16 shadow-inner">
+    <div id="skills" className="pb-16 pt-7 shadow-inner">
       <div className="flex flex-col items-center">
         <div className="flex justify-center">
-          <h1 className="text-5xl font-medium m-6">Skills</h1>
+          <h1 className="m-6 text-5xl font-medium">Skills</h1>
           {/* <ToggleSwitch
             checked={checked}
             setChecked={(checked) => setChecked(checked)}
@@ -59,7 +59,7 @@ const SkillList = () => {
           </div>
         )} */}
 
-        <div className="w-3/4 flex flex-col gap-3">
+        <div className="flex w-3/4 flex-col gap-3">
           {skillData.map((skill, index) => (
             <SkillPercentageBar
               key={index}

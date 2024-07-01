@@ -12,7 +12,7 @@ const ToggleSwitch: FC<ToggleSwitchProps> = ({ checked, setChecked }) => {
 
   return (
     <div className="flex">
-      <label htmlFor="toggle" className="flex items-center cursor-pointer">
+      <label htmlFor="toggle" className="flex cursor-pointer items-center">
         <div className="relative">
           <input
             id="toggle"
@@ -22,14 +22,14 @@ const ToggleSwitch: FC<ToggleSwitchProps> = ({ checked, setChecked }) => {
             onChange={toggleChecked}
           />
           <div
-            className={`block w-14 h-8 rounded-full ${
+            className={`block h-8 w-14 rounded-full ${
               checked ? "bg-action" : "bg-zinc-500"
             }`}
           ></div>
           <div
-            className={`absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition ${
+            className={`absolute left-1 top-1 h-6 w-6 rounded-full bg-white transition ${
               checked
-                ? "transform translate-x-full bg-zinc-500"
+                ? "translate-x-full transform bg-zinc-500"
                 : "bg-secondary"
             }`}
           ></div>

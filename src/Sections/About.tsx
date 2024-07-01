@@ -2,16 +2,16 @@ import { InfoBox } from "@/components/InfoBox";
 
 const About = () => {
   return (
-    <div className="bd-container py-16 ">
-      <h1 className="text-5xl text-center font-medium mb-11 ">
+    <div className="bd-container py-16">
+      <h1 className="mb-11 text-center text-5xl font-medium">
         {" "}
         <span className="text-4xl text-action">
           Hello I am <br />
         </span>
       </h1>
 
-      <div className="flex md:flex-row items-center justify-between max-w-screen-md mx-auto ">
-        <div className="flex flex-col gap-4 justify-center items-center">
+      <div className="mx-auto flex max-w-screen-md items-center justify-between md:flex-row">
+        <div className="flex flex-col items-center justify-center gap-4">
           <p className="justify-center text-center max-sm:m-2">
             {/* <span className="text-2xl text-action">
               Hello I am <br />
@@ -26,7 +26,7 @@ const About = () => {
             projects.
           </p>
 
-          <div className="flex flex-row gap-3 mt-16 max-md:flex-col">
+          <div className="mt-16 flex flex-row gap-3 max-md:flex-col">
             <InfoBox Text="5" subText="Years of Experience"></InfoBox>
             <InfoBox Text="10" subText="Projects"></InfoBox>
             <InfoBox Text="3+" subText="Assignments"></InfoBox>

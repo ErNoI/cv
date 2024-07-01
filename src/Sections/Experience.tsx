@@ -3,10 +3,10 @@ import { assignmentData } from "@/data/StaticData";
 
 export const Experience = () => {
   return (
-    <div id="experience" className="py-16 bg-secondary shadow-xl">
-      <h1 className="text-5xl text-center font-medium mb-11 ">Experience</h1>
+    <div id="experience" className="bg-secondary py-16 shadow-xl">
+      <h1 className="mb-11 text-center text-5xl font-medium">Experience</h1>
 
-      <div className="sm:w-4/6 m-auto max-sm:w-11/12">
+      <div className="m-auto max-sm:w-11/12 sm:w-4/6">
         {assignmentData.map((assignment, index) => {
           return <Assignment key={index} {...assignment} />;
         })}

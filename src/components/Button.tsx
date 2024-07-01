@@ -14,7 +14,7 @@ export const Button: FC<buttonProps> = ({ buttonText, onClick }) => {
   return (
     <button
       onClick={handleClick}
-      className="min-h-14 min-w-44 max-h-14 max-w-44 rounded-md text-xl border-4 border-action text-action p-2 font-bold hover:bg-action hover:text-secondary duration-300"
+      className="max-h-14 min-h-14 min-w-44 max-w-44 rounded-md border-4 border-action p-2 text-xl font-bold text-action duration-300 hover:bg-action hover:text-secondary"
     >
       {buttonText}
     </button>

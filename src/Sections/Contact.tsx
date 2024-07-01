@@ -8,18 +8,18 @@ export type contactInfoBoxProps = {
 
 export const ContactInfoBox: FC<contactInfoBoxProps> = ({ Text, Icon }) => {
   return (
-    <div className=" flex bg-primary items-center p-4 h-16 rounded-md justify-center gap-3 shadow-lg">
+    <div className="flex h-16 items-center justify-center gap-3 rounded-md bg-primary p-4 shadow-lg">
       <Icon size={40}></Icon>
-      <div className="text-xl max-sm:text-sm text-action"> {Text}</div>
+      <div className="text-xl text-action max-sm:text-sm"> {Text}</div>
     </div>
   );
 };
 
 export const Contact = () => {
   return (
-    <div id="contact" className="about section bd-container py-16 bg-secondary">
-      <h1 className="text-5xl text-center font-medium mb-16">Contact Me</h1>
-      <div className="flex max-md:flex-col gap-3 justify-center max-md:items-center">
+    <div id="contact" className="about section bd-container bg-secondary py-16">
+      <h1 className="mb-16 text-center text-5xl font-medium">Contact Me</h1>
+      <div className="flex justify-center gap-3 max-md:flex-col max-md:items-center">
         <ContactInfoBox
           Text="Ernes.Filipovic@gmail.com"
           Icon={MdOutlineMailOutline}

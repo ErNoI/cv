@@ -32,8 +32,8 @@ export const ScrollTopButton = () => {
   return (
     <div
       onClick={scrollToTop}
-      className={`bg-secondary w-16 h-16 flex justify-center items-center fixed bottom-6 right-8  cursor-pointer rounded-full shadow-lg transition-all duration-300 max-md:bottom-3 max-md:right-3 max-lg:bg-action ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+      className={`fixed bottom-6 right-8 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-secondary shadow-lg transition-all duration-300 max-lg:bg-action max-md:bottom-3 max-md:right-3 ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
       }`}
     >
       <FaArrowUp color={isMobile ? "#3d3e42" : "#ffd06e"} size={30} />
