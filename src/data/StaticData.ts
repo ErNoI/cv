@@ -148,4 +148,11 @@ export const assignmentData: AssignmentProps[] = [
     year: "2016",
     tags: ["C#", "C++", "Java", "Unity", "Blender", "Photoshop"],
   },
+  {
+    company: "",
+    role: "",
+    description: "",
+    year: "2013",
+    tags: [],
+  },
 ];
