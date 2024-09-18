@@ -6,7 +6,7 @@ import About from "./sections/About";
 import { ScrollTopButton } from "./components/ScrollButton";
 function App() {
   return (
-    <div className="bg-primary sm:max-w-6xl sm:mx-auto border-l border-r border-action ">
+    <div className="border-l border-r border-action bg-primary sm:mx-auto sm:max-w-6xl">
       <Header />
       <About />
       <Experience />
