@@ -1,4 +1,4 @@
-import { skillProps } from "@/sections/Skills";
+import { skillProps } from "@/Sections/Skills";
 import { AssignmentProps } from "@/components/Assignment";
 
 export const skillData: skillProps[] = [
@@ -90,6 +90,7 @@ export const assignmentData: AssignmentProps[] = [
       "Docker",
       "Devops",
       "Microservice",
+      "CI/CD",
     ],
   },
   {
