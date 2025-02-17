@@ -54,7 +54,7 @@ export const skillData: skillProps[] = [
   {
     imgPath: "",
     skillName: "NodeJS",
-    percentage: 60,
+    percentage: 80,
   },
   {
     imgPath: "",
@@ -65,6 +65,11 @@ export const skillData: skillProps[] = [
     imgPath: "",
     skillName: "RestAPI",
     percentage: 60,
+  },
+  {
+    imgPath: "",
+    skillName: "GraphQL",
+    percentage: 70,
   },
   {
     imgPath: "",
