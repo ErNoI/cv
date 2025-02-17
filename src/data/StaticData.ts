@@ -43,8 +43,13 @@ export const skillData: skillProps[] = [
   },
   {
     imgPath: "",
+    skillName: "C#",
+    percentage: 80,
+  },
+  {
+    imgPath: "",
     skillName: "Postgres",
-    percentage: 40,
+    percentage: 60,
   },
   {
     imgPath: "",
