@@ -4,14 +4,13 @@ import { FC } from "react";
 
 export type skillProps = {
   skillName: string;
-  imgPath?: string;
   percentage?: number;
+  category?: "Frontend" | "Backend" | "DevOps / Tools";
 };
 
-export const Skill: FC<skillProps> = ({ imgPath, skillName }) => {
+export const Skill: FC<skillProps> = ({ skillName }) => {
   return (
     <div className="m-4 flex h-52 w-52 flex-col items-center justify-between rounded-2xl bg-secondary p-10 shadow-lg">
-      <img className="w-16" src={imgPath}></img>
       <h1 className="text-lg font-bold text-slate-100">{skillName}</h1>
     </div>
   );

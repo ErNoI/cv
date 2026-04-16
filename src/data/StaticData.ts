@@ -2,85 +2,35 @@ import { skillProps } from "@/Sections/Skills";
 import { AssignmentProps } from "@/components/Assignment";
 
 export const skillData: skillProps[] = [
-  {
-    imgPath: "",
-    skillName: ".Net",
-    percentage: 60,
-  },
-  {
-    imgPath: "",
-    skillName: "JavaScript",
-    percentage: 80,
-  },
-  {
-    skillName: "Html",
-    percentage: 90,
-  },
-  {
-    imgPath: "",
-    skillName: "CSS",
-    percentage: 80,
-  },
-  {
-    imgPath: "",
-    skillName: "Git",
-    percentage: 80,
-  },
-  {
-    imgPath: "",
-    skillName: "TypeScript",
-    percentage: 80,
-  },
-  {
-    imgPath: "",
-    skillName: "Devops",
-    percentage: 70,
-  },
-  {
-    imgPath: "",
-    skillName: "React",
-    percentage: 80,
-  },
-  {
-    imgPath: "",
-    skillName: "C#",
-    percentage: 80,
-  },
-  {
-    imgPath: "",
-    skillName: "Postgres",
-    percentage: 60,
-  },
-  {
-    imgPath: "",
-    skillName: "Mongodb",
-    percentage: 30,
-  },
-  {
-    imgPath: "",
-    skillName: "NodeJS",
-    percentage: 80,
-  },
-  {
-    imgPath: "",
-    skillName: "TailwindCSS",
-    percentage: 70,
-  },
-  {
-    imgPath: "",
-    skillName: "RestAPI",
-    percentage: 60,
-  },
-  {
-    imgPath: "",
-    skillName: "GraphQL",
-    percentage: 70,
-  },
-  {
-    imgPath: "",
-    skillName: "Microservices",
-    percentage: 70,
-  },
+  { skillName: ".Net", percentage: 60, category: "Backend" },
+  { skillName: "JavaScript", percentage: 90, category: "Frontend" },
+  { skillName: "Html", percentage: 90, category: "Frontend" },
+  { skillName: "CSS", percentage: 80, category: "Frontend" },
+  { skillName: "Git", percentage: 80, category: "DevOps / Tools" },
+  { skillName: "TypeScript", percentage: 80, category: "Frontend" },
+  { skillName: "Devops", percentage: 90, category: "DevOps / Tools" },
+  { skillName: "React", percentage: 90, category: "Frontend" },
+  { skillName: "C#", percentage: 80, category: "Backend" },
+  { skillName: "Postgres", percentage: 70, category: "Backend" },
+  { skillName: "Mongodb", percentage: 30, category: "Backend" },
+  { skillName: "NodeJS", percentage: 80, category: "Backend" },
+  { skillName: "TailwindCSS", percentage: 70, category: "Frontend" },
+  { skillName: "RestAPI", percentage: 80, category: "Backend" },
+  { skillName: "GraphQL", percentage: 90, category: "Backend" },
+  { skillName: "Microservices", percentage: 90, category: "Backend" },
+  { skillName: "Nest.Js", percentage: 90, category: "Backend" },
+  { skillName: "Prisma", percentage: 70, category: "Backend" },
+  { skillName: "Docker", percentage: 60, category: "DevOps / Tools" },
+  { skillName: "CI/CD", percentage: 80, category: "DevOps / Tools" },
+  { skillName: "SQL", percentage: 70, category: "Backend" },
+  { skillName: "Azure", percentage: 90, category: "Backend" },
+  { skillName: "Service Fabric", percentage: 50, category: "Backend" },
+  { skillName: "PHP", percentage: 40, category: "Backend" },
+  { skillName: "Java", percentage: 50, category: "Backend" },
+  { skillName: "C++", percentage: 30, category: "Backend" },
+  { skillName: "Agile", percentage: 90, category: "DevOps / Tools" },
+  { skillName: "Jira", percentage: 60, category: "DevOps / Tools" },
+  { skillName: "Drupal", percentage: 30, category: "DevOps / Tools" },
 ];
 
 export const assignmentData: AssignmentProps[] = [
@@ -105,11 +55,11 @@ export const assignmentData: AssignmentProps[] = [
   },
   {
     company: "Friday",
-    role: "Game Developer",
+    role: "Fullstack Developer",
     description:
-      "At Friday I started working with a new multiplayer horror VR game in Unreal engine 4. The team was developing the whole game logic from the ground - up close together with potential users. The work also involved developing AI functionalities and balanced maps to create good user experiences. I focused on developing the UI and world content, inviting users to really feel the game coming to life through the VR glasses.",
+      "I worked with the development of an accounting system that was designed to simplify the financial part of a company. The goal of the system was to support users with alarms, reminders and guidance to make accounting easier and more structured. The system handled different accounting flows and helped users keep track of important events and deadlines. The focus was to make the system easy to use and clear even for users without deeper accounting knowledge.",
     year: "2022",
-    tags: ["Unreal Engine 4", "C++", "Blueprints", "VR", "AI"],
+    tags: ["React", ".Net", "PostgreSQL", "Trello", "REST API"],
   },
   {
     company: "Toyota Material Handling",

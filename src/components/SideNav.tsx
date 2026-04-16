@@ -1,20 +1,34 @@
-import { useEffect, useState } from "react";
-import { MdWorkOutline, MdCode, MdOutlineMailOutline, MdPersonOutline } from "react-icons/md";
+import { useEffect, useRef, useState } from "react";
+import {
+  MdWorkOutline,
+  MdCode,
+  MdOutlineMailOutline,
+  MdPersonOutline,
+} from "react-icons/md";
 
 const sections = [
-  { id: "about",      label: "About",      Icon: MdPersonOutline },
+  { id: "about", label: "About", Icon: MdPersonOutline },
   { id: "experience", label: "Experience", Icon: MdWorkOutline },
-  { id: "skills",     label: "Skills",     Icon: MdCode },
-  { id: "contact",    label: "Contact",    Icon: MdOutlineMailOutline },
+  { id: "skills", label: "Skills", Icon: MdCode },
+  { id: "contact", label: "Contact", Icon: MdOutlineMailOutline },
 ];
 
 export const SideNav = () => {
   const [activeId, setActiveId] = useState<string>("");
+  const scrollingToRef = useRef<string | null>(null);
+  const lockTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
+      if (scrollingToRef.current) {
+        setActiveId(scrollingToRef.current);
+        return;
+      }
       // Near bottom → always highlight Contact
-      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 50) {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.scrollHeight - 50
+      ) {
         setActiveId("contact");
         return;
       }
@@ -35,7 +49,14 @@ export const SideNav = () => {
 
   function handleClick(id: string) {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (!el) return;
+    scrollingToRef.current = id;
+    setActiveId(id);
+    el.scrollIntoView({ behavior: "smooth" });
+    if (lockTimerRef.current) clearTimeout(lockTimerRef.current);
+    lockTimerRef.current = setTimeout(() => {
+      scrollingToRef.current = null;
+    }, 1000);
   }
 
   return (
@@ -43,7 +64,7 @@ export const SideNav = () => {
       {sections.map(({ id, label, Icon }) => (
         <div key={id} className="group relative flex items-center">
           {/* Tooltip — desktop only */}
-          <span className="pointer-events-none absolute right-12 hidden whitespace-nowrap rounded bg-action px-2 py-1 text-sm font-bold text-primary opacity-0 shadow transition-opacity duration-200 group-hover:opacity-100 sm:block">
+          <span className="pointer-events-none absolute right-12 hidden whitespace-nowrap rounded bg-secondary px-2 py-1 text-sm font-bold text-action opacity-0 shadow transition-opacity duration-200 group-hover:opacity-100 sm:block">
             {label}
           </span>
           {/* Icon button */}
@@ -56,7 +77,9 @@ export const SideNav = () => {
           >
             <Icon size={22} />
             {/* Label — mobile only */}
-            <span className="mt-0.5 text-[10px] font-medium sm:hidden">{label}</span>
+            <span className="mt-0.5 text-[10px] font-medium sm:hidden">
+              {label}
+            </span>
           </button>
         </div>
       ))}

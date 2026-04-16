@@ -4,7 +4,7 @@ import About from "./Sections/About";
 import { Contact } from "./Sections/Contact";
 import { Experience } from "./Sections/Experience";
 import { Header } from "./Sections/Header";
-import { SkillList } from "./Sections/Skills";
+import { SkillsV2 } from "./Sections/SkillsV2";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <About />
       <Experience />
-      <SkillList />
+      <SkillsV2 />
       <Contact />
       {/* <ScrollTopButton /> */}
     </div>
