@@ -17,7 +17,7 @@ export const ContactInfoBox: FC<contactInfoBoxProps> = ({ Text, Icon }) => {
 
 export const Contact = () => {
   return (
-    <div id="contact" className="about section bd-container bg-secondary py-16">
+    <div id="contact" className="about section bd-container bg-secondary py-16 pb-28 sm:pb-16">
       <h1 className="mb-16 text-center text-5xl font-medium">Contact Me</h1>
       <div className="flex justify-center gap-3 max-md:flex-col max-md:items-center">
         <ContactInfoBox

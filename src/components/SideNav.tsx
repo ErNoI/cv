@@ -12,20 +12,25 @@ export const SideNav = () => {
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (visible.length > 0) setActiveId(visible[0].target.id);
-      },
-      { rootMargin: "0px 0px -60% 0px", threshold: 0 }
-    );
-    sections.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      // Near bottom → always highlight Contact
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 50) {
+        setActiveId("contact");
+        return;
+      }
+      // Find the last section whose top edge is at or above 35% of the viewport
+      const threshold = window.innerHeight * 0.35;
+      let current = sections[0].id;
+      for (const { id } of sections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= threshold) current = id;
+      }
+      setActiveId(current);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   function handleClick(id: string) {
@@ -34,25 +39,27 @@ export const SideNav = () => {
   }
 
   return (
-    <div className="fixed right-4 top-1/2 z-50 flex -translate-y-1/2 flex-col gap-2 rounded-full bg-secondary px-2 py-4 shadow-lg">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 flex flex-row justify-around border-t border-action/30 bg-secondary px-2 py-2 shadow-lg sm:bottom-auto sm:left-auto sm:right-4 sm:top-1/2 sm:w-auto sm:-translate-y-1/2 sm:flex-col sm:gap-2 sm:rounded-full sm:border-0 sm:px-2 sm:py-4">
       {sections.map(({ id, label, Icon }) => (
         <div key={id} className="group relative flex items-center">
-          {/* Tooltip */}
-          <span className="pointer-events-none absolute right-12 whitespace-nowrap rounded bg-action px-2 py-1 text-sm font-bold text-primary opacity-0 shadow transition-opacity duration-200 group-hover:opacity-100">
+          {/* Tooltip — desktop only */}
+          <span className="pointer-events-none absolute right-12 hidden whitespace-nowrap rounded bg-action px-2 py-1 text-sm font-bold text-primary opacity-0 shadow transition-opacity duration-200 group-hover:opacity-100 sm:block">
             {label}
           </span>
           {/* Icon button */}
           <button
             onClick={() => handleClick(id)}
-            className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-200 hover:text-white ${
+            className={`flex flex-col items-center justify-center rounded-full px-3 py-1 transition-colors duration-200 sm:h-10 sm:w-10 sm:p-0 ${
               activeId === id ? "text-action" : "text-zinc-400"
-            }`}
+            } hover:text-white`}
             aria-label={label}
           >
             <Icon size={22} />
+            {/* Label — mobile only */}
+            <span className="mt-0.5 text-[10px] font-medium sm:hidden">{label}</span>
           </button>
         </div>
       ))}
-    </div>
+    </nav>
   );
 };
