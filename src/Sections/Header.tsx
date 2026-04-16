@@ -1,28 +1,5 @@
 import { Button } from "../components/Button";
 
-export const Menu = () => {
-  const MenuOptions = ["Experience", "Skills", "Contact"];
-  function handleClick(option: string): void {
-    const div = document.getElementById(option);
-    if (div) {
-      div.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-  return (
-    <div className="mb-14 flex justify-center font-extrabold text-zinc-400">
-      {MenuOptions.map((option, index) => (
-        <button
-          onClick={() => handleClick(option.toLowerCase())}
-          key={index}
-          className="m-2 hover:text-white"
-        >
-          {option}
-        </button>
-      ))}
-    </div>
-  );
-};
-
 export const Thumbnail = () => {
   return (
     <div className="flex justify-center gap-10">
@@ -50,7 +27,6 @@ export const Thumbnail = () => {
 export const Header = () => {
   return (
     <div className="bg-secondary py-10 shadow-lg">
-      <Menu />
       <Thumbnail />
     </div>
   );

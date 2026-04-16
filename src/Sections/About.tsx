@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="bd-container py-16">
+    <div id="about" className="bd-container py-16">
       <h1 className="mb-11 text-center text-5xl font-medium">
         <span className="text-4xl text-action">
           Hello I am <br />
@@ -8,7 +8,7 @@ const About = () => {
       </h1>
 
       <div className="mx-auto flex min-h-48 max-w-screen-md items-center justify-between md:flex-row">
-        <p className="justify-center text-center max-sm:m-2">
+        <p className="max-sm:m-2">
           A Fullstack developer, that is passionate about developing systems and
           creating web interfaces. With years of experience in web design and
           development. When I'm not working, I tend to spend my time going to
