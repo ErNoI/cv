@@ -60,7 +60,7 @@ export const SideNav = () => {
   }
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 flex flex-row justify-around border-t border-action/30 bg-secondary px-2 py-2 shadow-lg sm:bottom-auto sm:left-auto sm:right-4 sm:top-1/2 sm:w-auto sm:-translate-y-1/2 sm:flex-col sm:gap-2 sm:rounded-full sm:border-0 sm:px-2 sm:py-4">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 flex flex-row justify-around border-t border-action bg-secondary px-2 py-2 shadow-lg sm:bottom-auto sm:left-auto sm:right-4 sm:top-1/2 sm:w-auto sm:-translate-y-1/2 sm:flex-col sm:gap-2 sm:rounded-full sm:border-0 sm:px-2 sm:py-4">
       {sections.map(({ id, label, Icon }) => (
         <div key={id} className="group relative flex items-center">
           {/* Tooltip — desktop only */}
