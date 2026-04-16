@@ -8,7 +8,7 @@ const About = () => {
       </h1>
 
       <div className="mx-auto flex min-h-48 max-w-screen-md items-center justify-between md:flex-row">
-        <p className="max-sm:m-2">
+        <p className="max-sm:mx-6">
           A Fullstack developer, that is passionate about developing systems and
           creating web interfaces. With years of experience in web design and
           development. When I'm not working, I tend to spend my time going to
