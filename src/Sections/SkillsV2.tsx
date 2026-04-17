@@ -4,22 +4,15 @@ import { skillProps } from "./Skills";
 
 const CATEGORY_ORDER = ["Backend", "Frontend", "DevOps / Tools"] as const;
 
-const getTier = (percentage: number) => {
-  if (percentage <= 40) return 1;
-  if (percentage <= 70) return 2;
-  return 3;
-};
-
-const SkillRow: FC<skillProps> = ({ skillName, percentage = 0 }) => {
-  const tier = getTier(percentage);
+const SkillRow: FC<skillProps> = ({ skillName, level = 1 }) => {
   return (
     <div className="flex items-center justify-between gap-2">
-      <span className="text-sm text-zinc-300">{skillName}</span>
+      <span className="text-base text-zinc-300">{skillName}</span>
       <div className="flex shrink-0 gap-1">
         {[1, 2, 3].map((i) => (
           <span
             key={i}
-            className={`text-base leading-none ${i <= tier ? "text-action" : "text-accent"}`}
+            className={`text-xl leading-none ${i <= level ? "text-action" : "text-accent"}`}
           >
             ●
           </span>
@@ -34,9 +27,7 @@ const SkillCategory: FC<{
   skills: skillProps[];
   cols?: number;
 }> = ({ name, skills, cols = 2 }) => {
-  const sorted = [...skills].sort(
-    (a, b) => (b.percentage ?? 0) - (a.percentage ?? 0),
-  );
+  const sorted = [...skills].sort((a, b) => (b.level ?? 0) - (a.level ?? 0));
   const colSize = Math.ceil(sorted.length / cols);
   const columns = Array.from({ length: cols }, (_, i) =>
     sorted.slice(i * colSize, (i + 1) * colSize),
@@ -49,18 +40,14 @@ const SkillCategory: FC<{
       </p>
 
       {/* Mobile: single column */}
-      <div className="flex flex-col gap-3 sm:hidden">
+      <div className="flex flex-col gap-3 min-[800px]:hidden">
         {sorted.map((s) => (
-          <SkillRow
-            key={s.skillName}
-            skillName={s.skillName}
-            percentage={s.percentage}
-          />
+          <SkillRow key={s.skillName} skillName={s.skillName} level={s.level} />
         ))}
       </div>
 
-      {/* sm+: multi-column with dividers */}
-      <div className="hidden gap-0 sm:flex">
+      {/* md+: multi-column with dividers */}
+      <div className="hidden gap-0 min-[800px]:flex">
         {columns.map((col, i) => (
           <div key={i} className="flex flex-1">
             {i > 0 && (
@@ -71,7 +58,7 @@ const SkillCategory: FC<{
                 <SkillRow
                   key={s.skillName}
                   skillName={s.skillName}
-                  percentage={s.percentage}
+                  level={s.level}
                 />
               ))}
             </div>
@@ -92,11 +79,11 @@ export const SkillsV2: FC = () => {
     <div id="skills" className="pb-16 pt-7 shadow-inner">
       <div className="flex flex-col items-center">
         <div className="m-6 flex justify-center">
-          <h1 className="text-5xl font-medium">Skills</h1>
+          <h1 className="text-5xl font-medium text-action">Skills</h1>
         </div>
         <div className="mx-auto flex w-11/12 flex-col gap-4 sm:w-3/4">
-          <SkillCategory name="Backend" skills={grouped[0].skills} cols={3} />
-          <div className="grid gap-4 sm:grid-cols-2">
+          <SkillCategory name="Backend" skills={grouped[0].skills} cols={2} />
+          <div className="grid gap-4 min-[1100px]:grid-cols-2">
             {grouped.slice(1).map((g) => (
               <SkillCategory
                 key={g.name}

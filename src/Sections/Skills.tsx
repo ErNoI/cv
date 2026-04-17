@@ -4,7 +4,7 @@ import { FC } from "react";
 
 export type skillProps = {
   skillName: string;
-  percentage?: number;
+  level?: 1 | 2 | 3;
   category?: "Frontend" | "Backend" | "DevOps / Tools";
 };
 
@@ -16,25 +16,26 @@ export const Skill: FC<skillProps> = ({ skillName }) => {
   );
 };
 
-export const SkillPercentageBar: FC<skillProps> = ({
-  skillName,
-  percentage,
-}) => {
+export const SkillPercentageBar: FC<skillProps> = ({ skillName, level }) => {
   return (
     <div className="my-4 flex items-center justify-between font-bold max-lg:flex-col">
       <span className="">{skillName}</span>
-      <div className="h-2.5 w-10/12 bg-accent">
-        <div
-          className="h-2.5 bg-action"
-          style={{ width: `${percentage}%` }}
-        ></div>
+      <div className="flex shrink-0 gap-1">
+        {[1, 2, 3].map((i) => (
+          <span
+            key={i}
+            className={`text-base leading-none ${i <= (level ?? 0) ? "text-action" : "text-accent"}`}
+          >
+            ●
+          </span>
+        ))}
       </div>
     </div>
   );
 };
 
 export const SkillList: FC = () => {
-  skillData.sort((a, b) => (b.percentage || 0) - (a.percentage || 0));
+  skillData.sort((a, b) => (b.level || 0) - (a.level || 0));
   return (
     <div id="skills" className="pb-16 pt-7 shadow-inner">
       <div className="flex flex-col items-center">
@@ -45,7 +46,6 @@ export const SkillList: FC = () => {
           {skillData.map((skill, index) => (
             <SkillPercentageBar
               key={index}
-              percentage={skill.percentage}
               skillName={skill.skillName}
             ></SkillPercentageBar>
           ))}
